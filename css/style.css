@@ -1,18 +1,16 @@
-/* =============================================
-   FocusFlow - Main Stylesheet
-   ============================================= */
+/* --- FocusFlow - Main Stylesheet --- */
 
-/* -- Google Font -- */
+/* -- Fonts -- */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Instrument+Sans:wght@300;400;500&display=swap');
 
-/* -- CSS Variables (warna & ukuran global) -- */
+/* -- CSS Variables (warna dan ukuran global) -- */
 :root {
   --bg:         #F6F3EE;
   --white:      #FFFFFF;
   --border:     #E2D9CF;
   --text:       #1C1916;
   --muted:      #8A7F75;
-  --accent:     #C0533A;       /* merah bata */
+  --accent:     #C0533A;
   --accent-bg:  #F7EAE6;
   --blue:       #3A72C0;
   --blue-bg:    #E6EDF7;
@@ -22,9 +20,7 @@
   --shadow:     0 2px 16px rgba(0,0,0,0.07);
 }
 
-/* =============================================
-   RESET & BASE
-   ============================================= */
+/* === RESET dan BASE === */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -39,9 +35,7 @@ body {
   padding: 36px 20px 60px;
 }
 
-/* =============================================
-   HEADER
-   ============================================= */
+/* === HEADER === */
 header {
   text-align: center;
   margin-bottom: 32px;
@@ -66,9 +60,7 @@ header p {
   font-weight: 300;
 }
 
-/* =============================================
-   LAYOUT UTAMA (2 kolom di desktop)
-   ============================================= */
+/* === LAYOUT UTAMA === */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -84,9 +76,7 @@ main {
   }
 }
 
-/* =============================================
-   CARD (wrapper tiap section)
-   ============================================= */
+/* === CARD === */
 .card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -102,9 +92,7 @@ main {
   margin-bottom: 20px;
 }
 
-/* =============================================
-   POMODORO — Mode Tabs
-   ============================================= */
+/* === POMODORO - Mode Tab === */
 .mode-tabs {
   display: flex;
   gap: 6px;
@@ -128,16 +116,14 @@ main {
   transition: background 0.2s, color 0.2s;
 }
 
-/* Tab yang sedang aktif */
+/* Tab yg sedang aktif */
 .mode-btn.active {
   background: var(--white);
   color: var(--accent);
   box-shadow: 0 1px 5px rgba(0,0,0,0.08);
 }
 
-/* =============================================
-   POMODORO — Tampilan Timer
-   ============================================= */
+/* === POMODORO - Tampilan Timer === */
 .timer-box {
   text-align: center;
   margin: 10px 0 22px;
@@ -162,9 +148,7 @@ main {
   margin-top: 8px;
 }
 
-/* =============================================
-   POMODORO — Tombol Kontrol
-   ============================================= */
+/* === POMODORO - Tombol Kontrol === */
 .timer-controls {
   display: flex;
   gap: 10px;
@@ -186,7 +170,7 @@ button:active {
   transform: scale(0.96);
 }
 
-/* Tombol reset & skip */
+/* Tombol reset dan skip */
 #btn-reset,
 #btn-skip {
   background: var(--bg);
@@ -201,7 +185,7 @@ button:active {
   color: var(--text);
 }
 
-/* Tombol start — paling menonjol */
+/* Tombol start - paling menonjol */
 #btn-start {
   background: var(--accent);
   color: #fff;
@@ -214,9 +198,7 @@ button:active {
   opacity: 0.88;
 }
 
-/* =============================================
-   POMODORO — Dot Session Tracker
-   ============================================= */
+/* === POMODORO - Dot Session Tracker === */
 .dots {
   display: flex;
   justify-content: center;
@@ -237,9 +219,7 @@ button:active {
   background: var(--accent);
 }
 
-/* =============================================
-   TO-DO — Input
-   ============================================= */
+/* === TO-DO - Input === */
 .todo-input-row {
   display: flex;
   gap: 8px;
@@ -280,9 +260,7 @@ button:active {
   opacity: 0.88;
 }
 
-/* =============================================
-   TO-DO — Filter Buttons
-   ============================================= */
+/* === TO-DO - Filter Button === */
 .todo-filters {
   display: flex;
   gap: 6px;
@@ -305,9 +283,7 @@ button:active {
   background: var(--blue-bg);
 }
 
-/* =============================================
-   TO-DO — List Item
-   ============================================= */
+/* === TO-DO — List Item === */
 #todo-list {
   list-style: none;
   display: flex;
@@ -395,9 +371,7 @@ button:active {
   background: var(--accent-bg);
 }
 
-/* =============================================
-   TO-DO — Footer
-   ============================================= */
+/* === TO-DO — Footer === */
 .todo-footer {
   display: flex;
   justify-content: space-between;
@@ -420,9 +394,7 @@ button:active {
   color: var(--accent);
 }
 
-/* =============================================
-   STATS BAR
-   ============================================= */
+/* === STATS BAR === */
 .stats {
   display: flex;
   gap: 14px;
@@ -462,9 +434,7 @@ button:active {
   margin-top: 4px;
 }
 
-/* =============================================
-   TOAST NOTIFICATION
-   ============================================= */
+/* === TOAST NOTIFICATION === */
 #toast {
   position: fixed;
   bottom: 24px;

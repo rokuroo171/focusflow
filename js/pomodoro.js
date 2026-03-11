@@ -1,6 +1,4 @@
-// =============================================
-//  pomodoro.js — Logika Timer Pomodoro
-// =============================================
+// --- Logic Timer Pomodoro ---
 
 // -- Durasi tiap mode (dalam detik) --
 const MODES = {

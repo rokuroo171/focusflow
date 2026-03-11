@@ -1,6 +1,4 @@
-// =============================================
-//  todo.js — Logika To-Do List
-// =============================================
+// --- Logic To-Do List ---
 
 // -- State --
 let todos         = JSON.parse(localStorage.getItem("ff_todos") || "[]");
@@ -22,11 +20,11 @@ function saveTodos() {
 function addTodo() {
   const text = todoInput.value.trim();
 
-  // Jangan tambah kalau input kosong
+  // jgn tambah kalau input kosong
   if (!text) return;
 
   const newTodo = {
-    id:   Date.now(),   // pakai timestamp sebagai ID unik
+    id:   Date.now(),   // pakai timestamp sbg ID unik
     text: text,
     done: false,
   };
@@ -40,7 +38,7 @@ function addTodo() {
   showToast("📝 Tugas ditambahkan!");
 }
 
-// -- Centang / un-centang todo --
+// -- Check / uncheck todo --
 function toggleTodo(id) {
   const todo = todos.find((t) => t.id === id);
   if (!todo) return;
@@ -63,7 +61,7 @@ function deleteTodo(id) {
   updateStats();
 }
 
-// -- Hapus semua todo yang sudah selesai --
+// -- Hapus semua todo yang udah --
 function clearDoneTodos() {
   todos = todos.filter((t) => !t.done);
   saveTodos();
@@ -96,7 +94,7 @@ function renderTodos() {
   // Kosongkan list dulu
   todoList.innerHTML = "";
 
-  // Tampilkan pesan kalau tidak ada item
+  // Menampilkan pesan kalau tdk ada item
   if (filtered.length === 0) {
     todoList.innerHTML = `
       <li style="text-align:center; color:var(--muted); font-size:0.85rem; padding:20px 0;">
@@ -123,7 +121,7 @@ function renderTodos() {
     todoList.appendChild(li);
   });
 
-  // Pasang event ke tiap checkbox & tombol hapus
+  // Pasang event di tiap checkbox dan tombol hapus
   document.querySelectorAll(".todo-check").forEach((el) => {
     el.addEventListener("click", () => toggleTodo(Number(el.dataset.id)));
   });
@@ -141,7 +139,7 @@ function updateCount() {
   todoCount.textContent = `${activeCount} tugas tersisa`;
 }
 
-// -- Escape karakter HTML (keamanan dasar) --
+// -- Escape chr HTML --
 function escapeHTML(str) {
   return str
     .replace(/&/g,  "&amp;")
@@ -156,12 +154,12 @@ function escapeHTML(str) {
 // Tombol "+"
 btnAdd.addEventListener("click", addTodo);
 
-// Enter di input juga tambah todo
+// Enter di input jg tambah todo
 todoInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTodo();
 });
 
-// Tombol hapus selesai
+// Tombol hapus yg sudah
 btnClear.addEventListener("click", clearDoneTodos);
 
 // Tombol filter

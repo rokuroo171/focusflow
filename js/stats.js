@@ -1,9 +1,4 @@
-// =============================================
-//  stats.js — Statistik & Fungsi Bersama
-//
-//  File ini dimuat SETELAH pomodoro.js & todo.js
-//  Berisi variabel & fungsi yang dipakai keduanya
-// =============================================
+// --- Stats dan Fungsi Bersama -----
 
 // -- Variabel global (dipakai pomodoro.js juga) --
 let completedPomodoros = 0;
@@ -29,7 +24,7 @@ function updateStats() {
 }
 
 // =============================================
-//  showToast — Notifikasi singkat di bawah layar
+//  showToast —  Notif di bawah layar
 // =============================================
 const toastEl = document.getElementById("toast");
 let toastTimeout;
@@ -38,7 +33,7 @@ function showToast(message) {
   toastEl.textContent = message;
   toastEl.classList.add("show");
 
-  // Sembunyikan lagi setelah 2.5 detik
+  // Toast timeout setelah 2.5 detik
   clearTimeout(toastTimeout);
   toastTimeout = setTimeout(() => {
     toastEl.classList.remove("show");
