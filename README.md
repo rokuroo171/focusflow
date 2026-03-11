@@ -58,6 +58,3 @@ git clone https://github.com/username/focusflow.git
 ## 🖼 Preview
 
 ![FocusFlow Preview](preview.png)
-
----
-
