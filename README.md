@@ -1,60 +1,77 @@
-# 🍅 FocusFlow - Pomodoro + To-Do App
+[🇮🇩 Bahasa Indonesia](README.id.md) | 🇬🇧 English
 
-Aplikasi produktivitas sederhana berbasis **HTML, CSS, dan JavaScript murni** (tanpa framework).  
+# 🍅 FocusFlow — Pomodoro + To-Do App
 
----
-
-## Fitur
-
-- **Pomodoro Timer** — focus 25 menit, short break 5 menit, long break 15 menit
-- **Session Tracker** — 4 dot yang mewakili 1 putaran pomodoro
-- **To-Do List** — tambah, centang, hapus tugas; tersimpan otomatis
-- **Filter Tugas** — tampilkan semua / aktif / selesai
-- **Stats Bar** — jumlah pomodoro, tugas selesai, total menit fokus
-- **Toast Notification** — notifikasi kecil setiap ada aksi
+A simple productivity app built with pure **HTML, CSS, and JavaScript** — no frameworks.
 
 ---
 
-## Struktur File
+## Features
+
+- **Pomodoro Timer** — 25 min focus, 5 min short break, 15 min long break
+- **Session Tracker** — 4 dots representing one full pomodoro round
+- **To-Do List** — add, check, and delete tasks; auto-saved to localStorage
+- **Task Filter** — view all / active / completed tasks
+- **Stats Bar** — pomodoro count, completed tasks, total focus minutes
+- **Toast Notification** — small notification on every action
+
+---
+
+## File Structure
 
 ```
 focusflow/
-├── index.html        # Struktur halaman
+├── index.html        # Page structure
 ├── css/
-│   └── style.css     # Semua styling
+│   └── style.css     # All styling
 └── js/
-    ├── stats.js      # Variabel global & fungsi toast (load pertama)
-    ├── pomodoro.js   # Logika timer pomodoro
-    └── todo.js       # Logika to-do list
+    ├── stats.js      # Global variables & toast function (loaded first)
+    ├── pomodoro.js   # Timer logic
+    └── todo.js       # To-do list logic
 ```
 
-> **Urutan load JS penting!**  
-> `stats.js` harus dimuat duluan karena berisi variabel yang dipakai file lain.
+> **JS load order matters!**
+> `stats.js` must be loaded first as it contains variables used by other files.
 
 ---
 
-## Cara Pakai
+## Getting Started
 
-1. Clone repo ini
 ```bash
-git clone https://github.com/username/focusflow.git
+git clone https://github.com/rokuroo171/focusflow.git
 ```
 
-2. Buka `index.html` langsung di browser — tidak perlu server.
+Open `index.html` directly in a browser — no server needed.
+
+Or visit the live version: [my-focusflow.vercel.app](https://my-focusflow.vercel.app)
 
 ---
 
-## 🛠 Teknologi
+## Tech Stack
 
-| Teknologi | Kegunaan |
-|-----------|----------|
-| HTML5 | Struktur halaman |
+| Technology | Usage |
+|-----------|-------|
+| HTML5 | Page structure |
 | CSS3 | Styling & layout (Grid, Flexbox, CSS Variables) |
-| JavaScript (ES6) | Logika aplikasi |
-| localStorage | Menyimpan data todo |
+| JavaScript (ES6) | App logic |
+| localStorage | Persisting todo data |
 
 ---
 
-## 🖼 Preview
+## Concepts Practiced
+
+- `setInterval` & `clearInterval` for the timer
+- Array methods: `.find()`, `.filter()`, `.forEach()`
+- `localStorage` for data persistence
+- DOM manipulation: `createElement`, `innerHTML`, `classList`
+- Event listeners: `click`, `keydown`
+
+---
+
+## Preview
 
 ![FocusFlow Preview](preview.png)
+
+---
+
+Made with ☕ as a learning project.
