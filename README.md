@@ -72,3 +72,6 @@ Or visit the live version: [my-focusflow.vercel.app](https://my-focusflow.vercel
 
 ![FocusFlow Preview](preview.png)
 
+---
+
+Built by [me](https://github.com/rokuroo171) — day 1 of 1day1project
