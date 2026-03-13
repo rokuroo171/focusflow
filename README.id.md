@@ -74,4 +74,4 @@ Atau kunjungi versi live: [my-focusflow.vercel.app](https://my-focusflow.vercel.
 
 ---
 
-Built by [me](https://github.com/rokuroo171) — day 2 of 1day1project
+Built by [me](https://github.com/rokuroo171) — day 1 of 1day1project
